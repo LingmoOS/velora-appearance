@@ -1,0 +1,561 @@
+dde-appearance (1.1.79) unstable; urgency=medium
+
+  * fix: Resolve the issue that mouse thumbnails generated during 1.25
+    scaling have jagged edges
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 27 Feb 2026 15:59:30 +0800
+
+dde-appearance (1.1.78) unstable; urgency=medium
+
+  * fix: Fixed abnormal behavior of secondary screen wallpaper
+  * feat: add maximize and unmaximize methods for active window
+  * fix: make scale notification persistent
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 05 Feb 2026 19:24:39 +0800
+
+dde-appearance (1.1.77) unstable; urgency=medium
+
+  * fix: fix auto theme switching when global theme changes
+  * refactor: remove GTK theme thumbnail generation code
+  * fix: fix custom theme override not applying
+
+ -- zhangkun <zhangkun2@uniontech.com>  Tue, 06 Jan 2026 17:51:27 +0800
+
+dde-appearance (1.1.76) unstable; urgency=medium
+
+  * fix: replace platform detection with DTK method
+  * fix: The theme judgment method is incorrect
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 18 Dec 2025 19:44:26 +0800
+
+dde-appearance (1.1.75) unstable; urgency=medium
+
+  * Release 1.1.75
+
+ -- YeShanShan <yeshanshan@uniontech.com>  Thu, 11 Dec 2025 20:32:37 +0800
+
+dde-appearance (1.1.74) unstable; urgency=medium
+
+  * fix: handle cursor size configuration changes
+
+ -- zhangkun <zhangkun2@uniontech.com>  Mon, 08 Dec 2025 09:37:00 +0800
+
+dde-appearance (1.1.73) unstable; urgency=medium
+
+  * feat: add cursor size configuration support
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 04 Dec 2025 19:37:00 +0800
+
+dde-appearance (1.1.72) unstable; urgency=medium
+
+  * fix: initialize member variables to prevent undefined behavior
+  * fix: remove de_CH resource
+
+ -- zhaoyingzhen <zhaoyingzhen@uniontech.com>  Thu, 27 Nov 2025 17:38:43 +0800
+
+dde-appearance (1.1.71) unstable; urgency=medium
+
+  * fix: add Hei_MSCS font for Traditional Chinese locales
+
+ -- lvpeilong <lvpeilong@uniontech.com>  Thu, 30 Oct 2025 20:17:54 +0800
+
+dde-appearance (1.1.70) unstable; urgency=medium
+
+  * docs: add GPLv3 license and update license references
+
+ -- YeShanShan <yeshanshan@uniontech.com>  Thu, 18 Sep 2025 20:03:39 +0800
+
+dde-appearance (1.1.69) unstable; urgency=medium
+
+  * refactor: update key names to camelCase in accelerator map
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 28 Aug 2025 14:36:24 +0200
+
+dde-appearance (1.1.68) unstable; urgency=medium
+
+  * feat: add custom lock screen wallpaper flag
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 01 Aug 2025 10:45:58 +0800
+
+dde-appearance (1.1.67) unstable; urgency=medium
+
+  * refactor: remove QT theme setting functionality
+
+ -- WuJiangYu <wujiangyu@uniontech.com>  Wed, 16 Jul 2025 10:47:50 +0800
+
+dde-appearance (1.1.66) unstable; urgency=medium
+
+  * fix: add hardening flags and compiler warnings
+
+ -- WuJiangYu <wujiangyu@uniontech.com>  Thu, 03 Jul 2025 19:52:19 +0800
+
+dde-appearance (1.1.65) unstable; urgency=medium
+
+  * chore: remove es_MX translation
+
+ -- WuJiangYu <wujiangyu@uniontech.com>  Mon, 23 Jun 2025 17:17:04 +0800
+
+dde-appearance (1.1.64) unstable; urgency=medium
+
+  * refactor: improve wallpaper handling logic
+  * refactor: optimize code and suppress warnings
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 19 Jun 2025 21:45:36 +0800
+
+dde-appearance (1.1.63) unstable; urgency=medium
+
+  * fix: correct SLOT syntax to avoid QObject::connect warning
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 19 Jun 2025 10:29:09 +0800
+
+dde-appearance (1.1.62) unstable; urgency=medium
+
+  * refactor: improve memory management and code quality
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 29 May 2025 14:46:17 +0800
+
+dde-appearance (1.1.61) unstable; urgency=medium
+
+  * feat: Starting no longer initializes' Wallpaper-Uris' and
+    'Wallpaper_Slideshow'
+  * feat: Decoupling themes and wallpapers
+  * fix: 解决缩放设置失效的问题
+
+ -- YeShanShan <yeshanshan@uniontech.com>  Tue, 29 Apr 2025 13:45:49 +0800
+
+dde-appearance (1.1.60) unstable; urgency=medium
+
+  * fix: mark dde-fakewm requires plasma-kglobalaccel
+
+ -- rewine <luhongxu@deepin.org>  Thu, 17 Apr 2025 11:01:26 +0800
+
+dde-appearance (1.1.59) unstable; urgency=medium
+
+  * feat: The configuration of GlobalThemeOverride uses JSON format
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 11 Apr 2025 11:31:54 +0800
+
+dde-appearance (1.1.58) unstable; urgency=medium
+
+  * fix: rename deepin-kwin to kwin (need deepin-kwin >= 6.0.0)
+
+ -- rewine <luhongxu@deepin.org>  Wed, 09 Apr 2025 10:29:26 +0800
+
+dde-appearance (1.1.57) unstable; urgency=medium
+
+  * remove startdde dependency
+
+ -- fuleyi <fuleyi@uniontech.com>  Wed, 02 Apr 2025 11:20:50 +0800
+
+dde-appearance (1.1.56) unstable; urgency=medium
+
+  * chore(deb): unconflict with dde-kwin
+
+ -- rewine <luhongxu@deepin.org>  Thu, 27 Mar 2025 17:52:40 +0800
+
+dde-appearance (1.1.55) unstable; urgency=medium
+
+  * feat: replace using KX11Extras to get the current workspace
+  * fix: when QString is empty, call QString::front() will assert
+  * feat(cursor): when name is not read, fallback to id
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 27 Mar 2025 17:36:41 +0800
+
+dde-appearance (1.1.54) unstable; urgency=medium
+
+  * fix: no cursor theme given to kwin
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 20 Mar 2025 17:57:16 +0800
+
+dde-appearance (1.1.53) unstable; urgency=medium
+
+  * fix: no serif font config was generated when setting font
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 13 Mar 2025 13:33:56 +0800
+
+dde-appearance (1.1.52) unstable; urgency=medium
+
+  * fix: DBus local mutual call failed
+  * fix: The prompt information is not internationalized(Bug: 307525)
+
+ -- Lv Peilong <lvpeilong@uniontech.com>  Wed, 12 Mar 2025 11:05:38 +0800
+
+dde-appearance (1.1.51) unstable; urgency=medium
+
+  * fix: Some source files did not participate in compilation
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 07 Mar 2025 16:59:52 +0800
+
+dde-appearance (1.1.50) unstable; urgency=medium
+
+  * chore: adapt to qt6
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 07 Mar 2025 14:57:51 +0800
+
+dde-appearance (1.1.49) unstable; urgency=medium
+
+  * feat: refresh the font list when calling the list method
+  * feat: Add override font to support language functionality
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 27 Feb 2025 21:56:09 +0800
+
+dde-appearance (1.1.48) unstable; urgency=medium
+
+  * feat: remove wallpaper slideshow
+  * feat: adapt wallpaper lock
+  * fix: invalid custom theme setting
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 21 Feb 2025 16:03:41 +0800
+
+dde-appearance (1.1.47) unstable; urgency=medium
+
+  * feat: Adapt wallpaper settings for treeland environment
+
+ -- zhangkun <zhangkun2@uniontech.com>  Fri, 14 Feb 2025 10:52:31 +0800
+
+dde-appearance (1.1.46) unstable; urgency=medium
+
+  * feat: 去掉热区的gsetting调用 (#177)
+  * feat: Add files generated by qdbusXML2cpp and DCONG2cpp
+
+ -- fuleyi <fuleyi@uniontech.com>  Thu, 16 Jan 2025 17:41:24 +0800
+
+dde-appearance (1.1.45) unstable; urgency=medium
+
+  * chore: change the default appearance to light
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 09 Jan 2025 19:27:21 +0800
+
+dde-appearance (1.1.44) unstable; urgency=medium
+
+  * feat: 去掉gnome的gsetting的调用
+  * feat: 将xsetting的通过gsetting读取配置改成dconfig读取
+
+ -- fuleyi <fuleyi@uniontech.com>  Thu, 02 Jan 2025 10:55:59 +0800
+
+dde-appearance (1.1.43) unstable; urgency=medium
+
+  * Revert "fix: Quickly adjusting transparency may cause it to get stuck"
+  * chore: update custom theme and themethumb
+  * fix: translation not effective
+
+ -- zhangkun <zhangkun2@uniontech.com>  Tue, 24 Dec 2024 19:47:18 +0800
+
+dde-appearance (1.1.42) unstable; urgency=medium
+
+  * chore: update default global theme
+  * fix: active color are invalid in different global theme
+  * fix: 修复系统安装完成后无法进入桌面。输入密码后一直处于加载状态
+
+ -- fuleyi <fuleyi@uniontech.com>  Fri, 13 Dec 2024 15:22:11 +0800
+
+dde-appearance (1.1.41) unstable; urgency=medium
+
+  * fix: solve the problem of slow entry to the desktop
+
+ -- Chengqi E <echengqi@uniontech.com>  Mon, 09 Dec 2024 13:30:49 +0800
+
+dde-appearance (1.1.40) unstable; urgency=medium
+
+  * fix: the wallpaper list may not exist
+
+ -- zhangKun <zhangkun2@uniontech.com>  Fri, 06 Dec 2024 17:30:49 +0800
+
+dde-appearance (1.1.39) unstable; urgency=medium
+
+  * fix: 代码优化调整
+  * fix: the theme thumbnail is empty
+  * fix: teeland下不启动dde-fakewm 
+
+ -- fuleyi <fuleyi@uniontech.com>  Fri, 29 Nov 2024 14:03:03 +0800
+
+dde-appearance (1.1.38) unstable; urgency=medium
+
+  * release 1.1.38
+
+ -- zhangkun <zhangkun2@uniontech.com>  Thu, 21 Nov 2024 17:45:14 +0800
+
+dde-appearance (1.1.36) unstable; urgency=medium
+
+  * fix: monitor multitask status signal
+  * chore: 解决dbus调用，获取不到返回值的问题
+  * chore: 解决CI license 校验通过的问题
+  * chore: dbus激活dde-appearance接口的时候，应该启动deepin-service-manager服务
+  * feat: add interface for scrollbar policy
+  * feat: Compact mode does not affect the font setting range
+
+ -- fuleyi <fuleyi@uniontech.com>  Tue, 29 Oct 2024 17:10:44 +0800
+
+dde-appearance (1.1.35) unstable; urgency=medium
+
+  * chore: 解决控制中心个性化中主题图片加载不出来的问题
+  * fix:修复dde-appearance不能正常启动
+  * chore: 将dde-appearance 改成插件
+  * chore: 添加紧凑模式属性
+
+ -- fuleyi <fuleyi@uniontech.com>  Tue, 29 Oct 2024 17:09:55 +0800
+
+dde-appearance (1.1.34) unstable; urgency=medium
+
+  * chore: 解决快捷键无法恢复的问题
+  * Revert "chore: 解决快捷键无法恢复的问题"
+
+ -- fuleyi <fuleyi@uniontech.com>  Thu, 22 Aug 2024 11:08:54 +0800
+
+dde-appearance (1.1.33) unstable; urgency=medium
+
+  * chore: 解决注销或者重启后外观变成自动的问题 
+
+ -- fuleyi <fuleyi@uniontech.com>  Mon, 12 Aug 2024 16:51:37 +0800
+
+dde-appearance (1.1.32) unstable; urgency=medium
+
+  * fix: incorrect generated fontconfig configuration
+  * chore: 解决开机壁纸自动变更的问题
+
+ -- fuleyi <fuleyi@uniontech.com>  Thu, 08 Aug 2024 15:14:25 +0800
+
+dde-appearance (1.1.31) unstable; urgency=medium
+
+  * fix: notify kwin to reload the config when sync config(Issue: 10016)
+
+ -- Zhang kun <zhangkun2@uniontech.com>  Tue, 06 Aug 2024 15:59:16 +0800
+
+dde-appearance (1.1.30) unstable; urgency=medium
+
+  * fix: Cursor images are not scaled to the same size(Issue: 9892)
+
+ -- Deepin Packages Builder <packages@deepin.org>  Wed, 31 Jul 2024 15:33:31 +0800
+
+dde-appearance (1.1.29) unstable; urgency=medium
+
+  * release 1.1.29
+
+ -- zorowk <near.kingzero@gmail.com>  Mon, 03 jul 2024 10:03:57 +0800
+
+dde-appearance (1.1.28) unstable; urgency=medium
+
+  * release 1.1.28
+
+ -- Mike Chen <chenke@deepin.org>  Mon, 20 May 2024 13:15:56 +0800
+
+dde-appearance (1.1.27) unstable; urgency=medium
+
+  * fix: it doesn't work immediately
+
+ -- Wang Fei <wangfei@deepin.org>  Thu, 25 Apr 2024 13:32:54 +0800
+
+dde-appearance (1.1.26) unstable; urgency=medium
+
+  * fix: deepinwmfaker read error cursorSize
+
+ -- rewine <luhongxu@deepin.org>  Thu, 07 Mar 2024 10:42:56 +0800
+
+dde-appearance (1.1.25) unstable; urgency=medium
+
+  * feat: add signal for deepin fakewm
+
+ -- chenhongtao <chenhongtao@deepin.org>  Tue, 25 Jan 2024 10:09:27 +0800
+
+dde-appearance (1.1.24) unstable; urgency=medium
+
+  * fix: emit themechange again when themetype changed(https://github.com/linuxdeepin/developer-center/issues/7047)
+
+ -- chenhongtao <chenhongtao@deepin.org>  Tue, 23 Jan 2024 16:40:49 +0800
+
+dde-appearance (1.1.23) unstable; urgency=medium
+
+  * fix: first start, init for too long time
+
+ -- chenhongtao <chenhongtao@deepin.org>  Wed, 17 Jan 2024 16:55:34 +0800
+
+dde-appearance (1.1.22) unstable; urgency=medium
+
+  *  fix: globaltheme will set to before one
+
+ -- chenhongtao <chenhongtao@deepin.org>  Tue, 16 Jan 2024 17:34:39 +0800
+
+dde-appearance (1.1.21) unstable; urgency=medium
+
+  * fix: should init before regist the dbus service
+
+ -- chenhongtao <chenhongtao@deepin.org>  Mon, 15 Jan 2024 14:44:56 +0800
+
+dde-appearance (1.1.20) unstable; urgency=medium
+
+  * chore: use qt tools to generate adaptor
+  * chore: tidy up the workflow, fix the issue that wallpaper be set wrong
+
+ -- chenhongtao <chenhongtao@deepin.org>  Mon, 08 Jan 2024 10:10:08 +0800
+
+dde-appearance (1.1.9) unstable; urgency=medium
+
+  feat: add window keybindings
+
+ -- chenhongtao <chenhongtao@deepin.org>  Mon, 25 Dec 2023 10:47:48 +0800
+
+dde-appearance (1.1.8) unstable; urgency=medium
+
+  * fix: fakewm block with kwin when be invoked
+  * chore: fix a typo in fakewm/main.cpp
+
+ -- chenhongtao <chenhongtao@deepin.org>  Tue, 12 Dec 2023 13:16:25 +0800
+
+dde-appearance (1.1.7) unstable; urgency=medium
+
+  * chore: auto set theme feature is missing
+  * fix: remove unused dtkwidget devel builddep from debian/control
+  * chore: split deepinwmfaker
+
+ -- dengbo <dengbo@deepin.org>  Fri, 24 Nov 2023 13:58:50 +0800
+
+dde-appearance (1.1.6) unstable; urgency=medium
+
+  * chore: bring back first notification
+  * chore: commit gtk cursor module
+  * chore: update translations
+
+ -- dengbo <dengbo@deepin.org>  Wed, 06 Sep 2023 15:19:15 +0800
+
+dde-appearance (1.1.5) unstable; urgency=medium
+
+  * adjust the registing orders of services, put wm service front
+  * fix: systemd start after dde-session
+  * chore: remove useless log
+  * fix persionlization cannot get dart front png
+  * use full path to set background picture
+
+ -- chenhongtao <chenhongtao@deepin.org>  Mon, 14 Aug 2023 13:14:20 +0800
+
+dde-appearance (1.1.4) unstable; urgency=medium
+
+  * fix: get workSapce count when set wallpapers
+
+ -- dengbo <dengbo@deepin.org>  Wed, 12 Jul 2023 16:13:20 +0800
+
+dde-appearance (1.1.3) unstable; urgency=medium
+
+  * fix: wrong GlobalTheme value after auto switching dark mode
+  * fix: wayland can't set wallpaper
+  * fix: fix: background should refresh after set background
+
+ -- dengbo <dengbo@deepin.org>  Wed, 05 Jul 2023 11:08:40 +0800
+
+dde-appearance (1.1.2) unstable; urgency=medium
+
+  * check the dbus register
+  * move custom theme config from .cache to .config
+
+ -- chenhongtao <chenhongtao@deepin.org>  Mon, 12 Jun 2023 13:19:58 +0800
+
+dde-appearance (1.1.1) unstable; urgency=medium
+
+  * add Conflicts: dde-kwin.
+
+ -- LiChengGang <lichenggang@uniontech.com>  Tue, 16 May 2023 11:19:58 +0800
+
+dde-appearance (1.1.0) unstable; urgency=medium
+
+  * fix: 控制中心不显示窗管相关快捷键
+  * chore: remove deepin- prefix
+  * fix: alpha 升级到beta 设置壁纸白屏
+
+ -- dengbo <dengbo@uniontech.com>  Thu, 11 May 2023 17:38:50 +0800
+
+dde-appearance (1.0.9) unstable; urgency=medium
+
+  * fix: wrong systemd type
+  * fix: 切换主题外观桌面壁纸被替换
+  * fix: error form font to json
+  * fix: folder not be created and font not setted
+
+ -- dengbo <dengbo@uniontech.com>  Sat, 6 May 2023 10:21:50 +0800
+
+dde-appearance (1.0.8) unstable; urgency=medium
+
+  * fix: 桌面无法设置壁纸
+
+ -- dengbo <dengbo@uniontech.com>  Sun, 23 Apr 2023 17:53:20 +0800
+
+dde-appearance (1.0.7) unstable; urgency=medium
+
+  [ Deepin Packages Builder ]
+  * chore: merge deepin-wm-dbus
+
+ -- dengbo <dengbo@uniontech.com>  Mon, 3 Apr 2023 14:38:15 +0800
+
+dde-appearance (1.0.6) unstable; urgency=medium
+
+  [ Deepin Packages Builder ]
+  * release dde-appearance 1.0.6
+
+ -- dengbo <dengbo@uniontech.com>  Fri, 31 Mar 2023 11:26:15 +0800
+
+dde-appearance (1.0.5) unstable; urgency=medium
+
+  [ Deepin Packages Builder ]
+  * fix: wrong format of fontconfig file
+  * fix: 控制中心设置主题壁纸没有跟随改变
+  * fix: reset ApplicationName as org.deepin.dde.appearance
+  * fix: 调用DBus接口恢复个性化设置失效
+
+ -- dengbo <dengbo@uniontech.com>  Wed, 29 Mar 2023 14:28:42 +0800
+
+dde-appearance (1.0.4.1) unstable; urgency=medium
+
+  [ Deepin Packages Builder ]
+  * fix: 新建工作区时随机给一个壁纸(Bug: 181837)(Influence: 新建工作区-壁纸变化)
+  * fix: 修改主题缩略图模糊问题(Bug: 182545)(Influence: 屏幕缩放不为1时，控制中心-个性化-图标主题-缩略图)
+  * fix: 修改主题未选中问题(Bug: 181807)(Influence: 控制中心-个性化-图标)
+
+ -- caixiangrong <caixiangrong@uniontech.com>  Tue, 10 Jan 2023 14:23:01 +0800
+
+dde-appearance (1.0.4) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * fix: 个性化服务添加唤醒时设置壁纸(Task: 232189)(Influence: 待机唤起时壁纸处理)
+  * fix: 完善壁纸幻灯片功能(Bug: 181813)(Influence: 桌面右键-壁纸与屏保-自动更换壁纸)
+
+ -- lvpeilong <lvpeilong@uniontech.com>  Fri, 06 Jan 2023 16:30:45 +0800
+
+dde-appearance (1.0.3.3) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * fix: 修改图标缩略图获取方式(Task: 933, 0)(Influence: 控制中心-个性化-图标主题缩略图)
+  * fix: 修改主题显示顺序(Bug: 160505)(Influence: 控制中心-个性化-主题、图标主题、光标主题显示顺序)
+
+ -- zhaoyingzhen <zhaoyingzhen@uniontech.com>  Fri, 30 Dec 2022 10:11:55 +0800
+
+dde-appearance (1.0.2.1) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * fix: 适配XSettings服务名修改(Task: 204449)(Influence: 控制中心-显示-缩放设置)
+  * fix: 优化DBus处理(Task: 204449)(Influence: 个性化服务)
+  * fix: 更新翻译文件(Task: 204449)(Influence: 个性化-设置缩放-通知)
+  * fix: 添加翻译工具依赖(Task: 204449)(Influence: 个性化-设置缩放-通知)
+  * feat: 接口更变，处理个性化服务修改冲突(Task: 207483)(Influence: 接口更变)
+
+ -- zhaoyingzhen <zhaoyingzhen@uniontech.com>  Tue, 13 Dec 2022 20:35:06 +0800
+
+dde-appearance (1.0.1) unstable; urgency=medium
+
+  [ TagBuilder ]
+  * feat: 删除编译自动生成文件(Task: 176633)(Influence: 无)
+  * feat: 壁纸管理服务(Task: 170687)(Influence: 壁纸管理相关)
+  * fix: 修复字体和字体大小设置无效的问题(Task: 178097)(Influence: 控制中心/个性化/字体)
+  * feat: 项目工程结构优化(Task: 178097)(Influence: 无)
+  * feat: 个性化icon问题修改(Task: 178097)(Influence: Icon Theme)
+  * fix: 修改活动色、光标修改不生效问题(Task: 170635)(Influence: 控制中心-个性化-主题-修改活动色、光标)
+  * fix: 添加高可定主题功能(Task: 170635)(Influence: 控制中心-个性化-主题-高可定主题功能)
+  * fix: 修改光标设置不生效问题(Task: 170635)(Influence: 控制中心-个性化-主题-高可定主题-修改光标)
+  * fix: 修改个性化后端服务崩溃问题(Task: 195695)(Influence: 控制中心-进入个性化界面，后端服务崩溃)
+  * fix: 修改第二次进入控制中心个性化时间过长问题(Bug: 162283)(Influence: 控制中心-个性化-来回切换至主题界面)
+  * fix: 修改标准字体显示错误问题(Bug: 160519)(Influence: 控制中心-个性化-标准字体下拉项个数)
+
+ -- caixiangrong <caixiangrong@uniontech.com>  Wed, 19 Oct 2022 12:12:33 +0800
+
+dde-appearance (1.0.0) unstable; urgency=medium
+
+  * Initial release
+
+ --  <lixi@uniontech.com>  Wed, 03 Aug 2022 11:49:45 +0800
