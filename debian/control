@@ -1,7 +1,7 @@
-Source: dde-appearance
+Source: velora-appearance
 Section: devel
 Priority: optional
-Maintainer: Deepin Packages Builder <packages@deepin.com>
+Maintainer: Lingmo OS Team <team@lingmo.org>
 Build-Depends: debhelper (>= 9),
    cmake,
    pkg-config,
@@ -24,7 +24,7 @@ Build-Depends: debhelper (>= 9),
    libkf6config-dev,
    libgsettings-qt6-dev,
 Standards-Version: 3.9.8
-Homepage: http://www.deepin.org
+Homepage: https://github.com/LingmoOS/velora-appearance
 
 Package: dde-appearance
 Architecture: any
