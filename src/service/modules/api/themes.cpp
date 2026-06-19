@@ -52,13 +52,13 @@ QVector<QString> ThemesApi::listGlobalTheme()
 {
     QVector<QString> local;
     QDir home = QDir::home();
-    local.push_back(QString("%1/dde-appearance/deepin-themes/").arg(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)));
-    local.push_back(home.absoluteFilePath(".local/share/deepin-themes"));
-    local.push_back(home.absoluteFilePath(".deepin-themes"));
+    local.push_back(QString("%1/dde-appearance/lingmo-themes/").arg(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)));
+    local.push_back(home.absoluteFilePath(".local/share/lingmo-themes"));
+    local.push_back(home.absoluteFilePath(".lingmo-themes"));
 
     QVector<QString> sys;
     for (const QString &basedir : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation)) {
-        const QString path = QDir(basedir).filePath("deepin-themes");
+        const QString path = QDir(basedir).filePath("lingmo-themes");
         if (QFile::exists(path))
             sys.push_back(path);
     }

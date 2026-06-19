@@ -15,7 +15,7 @@
 #include <QStandardPaths>
 
 const QString CUSTOMTHEMEPATH =
-        QString("%1/dde-appearance/deepin-themes/custom").arg(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
+        QString("%1/dde-appearance/lingmo-themes/custom").arg(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
 
 #define THEMEFILE "index.theme"
 

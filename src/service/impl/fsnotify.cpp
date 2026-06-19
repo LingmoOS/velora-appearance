@@ -68,11 +68,11 @@ void Fsnotify::watchGlobalDirs()
     QStringList globalDirs;
     QDir home = QDir::home();
     globalDirs.append(home.absoluteFilePath(
-            QString("%1/dde-appearance/deepin-themes/").arg(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation))));
-    globalDirs.append(home.absoluteFilePath(".local/share/deepin-themes"));
-    globalDirs.append(home.absoluteFilePath(".deepin-themes"));
+            QString("%1/dde-appearance/lingmo-themes/").arg(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation))));
+    globalDirs.append(home.absoluteFilePath(".local/share/lingmo-themes"));
+    globalDirs.append(home.absoluteFilePath(".lingmo-themes"));
     for (const QString &basedir : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation)) {
-        const QString path = QDir(basedir).filePath("deepin-themes");
+        const QString path = QDir(basedir).filePath("lingmo-themes");
         if (QFile::exists(path))
             globalDirs.append(path);
     }
