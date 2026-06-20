@@ -54,7 +54,7 @@
 
 #define KWinDBusCompositorInterface "org.kde.kwin.Compositing"
 #define KWinDBusCompositorPath "/Compositor"
-const char defaultFirstBackgroundUri[] = "file:///usr/share/wallpapers/deepin/desktop.jpg";
+const char defaultFirstBackgroundUri[] = "file:///usr/share/wallpapers/lingmo/default.jpg";
 const char defaultSecondBackgroundUri[] = "francesco-ungaro-1fzbUyzsHV8-unsplash";
 
 //default cursor size :24

@@ -1679,7 +1679,7 @@ QString AppearanceManager::getWallpaperUri(const QString &index, const QString &
             const Background &bg = backgroudlist.at(QRandomGenerator::global()->generate() % backgroudlist.size());
             wallpaper = bg.getId();
         } else {
-            wallpaper = "file:///usr/share/wallpapers/deepin/desktop.jpg";
+            wallpaper = "file:///usr/share/wallpapers/lingmo/default.jpg";
         }
 
         if (auto value = PhaseWallPaper::setWallpaperUri(index, monitorName, wallpaper); value.has_value()) {

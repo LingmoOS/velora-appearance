@@ -11,7 +11,7 @@
 #include <pwd.h>
 #include <QDBusReply>
 
-QStringList Backgrounds::systemWallpapersDir = { "/usr/share/wallpapers/deepin" };
+QStringList Backgrounds::systemWallpapersDir = { "/usr/share/wallpapers/lingmo" };
 QStringList Backgrounds::uiSupportedFormats = { "jpeg", "png", "bmp", "tiff", "gif" };
 
 Backgrounds::Backgrounds(QObject *parent)
