@@ -1487,6 +1487,8 @@ QString AppearanceManager::doThumbnail(const QString &type, const QString &name)
         return m_subthemes->getCursorThumbnail(name);
     } else if (type == TYPEGLOBALTHEME) {
         return m_subthemes->getGlobalThumbnail(name);
+    } else if (type == TYPEGTK) {
+        return m_subthemes->getGtkThumbnail(name);
     } else {
         return QString("invalid type: %1").arg(type);
     }

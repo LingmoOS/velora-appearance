@@ -356,6 +356,46 @@ QString Subthemes::getCursorThumbnail(QString id)
     return getCursor(id, path);
 }
 
+QString Subthemes::getGtkThumbnail(QString id)
+{
+    if (gtkThemes.empty()) {
+        refreshGtkThemes();
+    }
+
+    bool found = false;
+    for (auto &&theme : gtkThemes) {
+        if (theme->getId() == id) {
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        return "";
+    }
+
+    if (globalThemes.empty()) {
+        refreshGlobalThemes();
+    }
+
+    QSharedPointer<Theme> currentGlobalTheme;
+    QString currentGlobalThemeId;
+    if (manager) {
+        currentGlobalThemeId = manager->getGLobalTheme();
+    }
+    for (auto &&theme : globalThemes) {
+        if (theme->getId() == currentGlobalThemeId) {
+            currentGlobalTheme = theme;
+            break;
+        }
+    }
+
+    if (!currentGlobalTheme) {
+        return "";
+    }
+
+    return getGlobal(currentGlobalTheme->getId(), currentGlobalTheme, id);
+}
+
 QVector<QSharedPointer<Theme>> Subthemes::getThemes(QVector<QString> files)
 {
     QVector<QSharedPointer<Theme>> infos;

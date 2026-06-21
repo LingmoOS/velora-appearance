@@ -47,6 +47,7 @@ public:
     QString getGlobalThumbnail(QString id);
     QString getIconThumbnail(QString id);
     QString getCursorThumbnail(QString id);
+    QString getGtkThumbnail(QString id);
     QVector<QSharedPointer<Theme>> getThemes(QVector<QString> files);
     bool isDeletable(QString file);
     bool isItemInList(QString item, QVector<QString> lists);
