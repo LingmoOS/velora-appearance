@@ -447,52 +447,56 @@ void AppearanceManager::timerEvent(QTimerEvent *event)
     }
 }
 
-// 设置gsetting
+void AppearanceManager::setGlobalTheme(QString value)
+{
+    if (value != m_property->globalTheme) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYGLOBALTHEME, value);
+        m_property->globalTheme = value;
+    }
+}
+
 void AppearanceManager::setFontSize(double value)
 {
-    if (!doUpdateFonts(value)) {
+    if (!doUpdateFonts(value))
         return;
-    }
+
     if (!m_fontsManager->isFontSizeValid(value)) {
-        qWarning() << "set font size error:invalid size " << value;
+        qWarning() << "set font size error:invalid font " << value;
         return;
     }
 
-    if (m_settingDconfig.isValid() && !qFuzzyCompare(value, m_property->fontSize)) {
-        m_settingDconfig.setValue(GSKEYFONTSIZE, value);
+    if (!qFuzzyCompare(value, m_property->fontSize)) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYFONTSIZE, value);
         m_property->fontSize = value;
         updateCustomTheme(TYPEFONTSIZE, QString::number(value));
     }
 }
 
-void AppearanceManager::setGlobalTheme(QString value)
-{
-    if (m_settingDconfig.isValid() && value != m_property->globalTheme) {
-        m_settingDconfig.setValue(GSKEYGLOBALTHEME, value);
-        m_property->globalTheme = value;
-    }
-}
-
 void AppearanceManager::setGtkTheme(QString value)
 {
-    if (m_settingDconfig.isValid() && value != m_property->gtkTheme) {
-        m_settingDconfig.setValue(GSKEYGTKTHEME, value);
+    if (value != m_property->gtkTheme) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYGTKTHEME, value);
         m_property->gtkTheme = value;
     }
 }
 
 void AppearanceManager::setIconTheme(QString value)
 {
-    if (m_settingDconfig.isValid() && value != m_property->iconTheme) {
-        m_settingDconfig.setValue(GSKEYICONTHEM, value);
+    if (value != m_property->iconTheme) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYICONTHEM, value);
         m_property->iconTheme = value;
     }
 }
 
 void AppearanceManager::setCursorTheme(QString value)
 {
-    if (m_settingDconfig.isValid() && value != m_property->cursorTheme) {
-        m_settingDconfig.setValue(GSKEYCURSORTHEME, value);
+    if (value != m_property->cursorTheme) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYCURSORTHEME, value);
         m_property->cursorTheme = value;
     }
 }
@@ -504,8 +508,9 @@ void AppearanceManager::setStandardFont(QString value)
         return;
     }
 
-    if (m_settingDconfig.isValid() && value != m_property->standardFont) {
-        m_settingDconfig.setValue(GSKEYFONTSTANDARD, value);
+    if (value != m_property->standardFont) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYFONTSTANDARD, value);
         m_property->standardFont = value;
     }
 }
@@ -517,32 +522,36 @@ void AppearanceManager::setMonospaceFont(QString value)
         return;
     }
 
-    if (m_settingDconfig.isValid() && value != m_property->monospaceFont) {
-        m_settingDconfig.setValue(GSKEYFONTMONOSPACE, value);
+    if (value != m_property->monospaceFont) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYFONTMONOSPACE, value);
         m_property->monospaceFont = value;
     }
 }
 
 void AppearanceManager::setDTKSizeMode(int value)
 {
-    if (value != m_property->dtkSizeMode && m_settingDconfig.isValid()) {
-        m_settingDconfig.setValue(DDTKSIZEMODE, value);
+    if (value != m_property->dtkSizeMode) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(DDTKSIZEMODE, value);
         m_property->dtkSizeMode = value;
     }
 }
 
 void AppearanceManager::setQtScrollBarPolicy(int value)
 {
-    if (value != m_property->qtScrollBarPolicy && m_settingDconfig.isValid()) {
-        m_settingDconfig.setValue(DQTSCROLLBARPOLICY, value);
+    if (value != m_property->qtScrollBarPolicy) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(DQTSCROLLBARPOLICY, value);
         m_property->qtScrollBarPolicy = value;
     }
 }
 
 void AppearanceManager::setCursorSize(int value)
 {
-    if (value != m_property->cursorSize && m_settingDconfig.isValid()) {
-        m_settingDconfig.setValue(TYPECURSORSIZE, value);
+    if (value != m_property->cursorSize) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(TYPECURSORSIZE, value);
         m_property->cursorSize = value;
     }
 }
@@ -569,8 +578,9 @@ void AppearanceManager::setWindowRadius(int value)
 
 void AppearanceManager::setOpacity(double value)
 {
-    if (m_settingDconfig.isValid() && !qFuzzyCompare(value, m_property->opacity)) {
-        m_settingDconfig.setValue(GSKEYOPACITY, value);
+    if (!qFuzzyCompare(value, m_property->opacity)) {
+        if (m_settingDconfig.isValid())
+            m_settingDconfig.setValue(GSKEYOPACITY, value);
         m_property->opacity = value;
         updateCustomTheme(TYPEWINDOWOPACITY, QString::number(value));
     }
