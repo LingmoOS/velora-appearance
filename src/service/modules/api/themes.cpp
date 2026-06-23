@@ -206,11 +206,6 @@ bool ThemesApi::setGtkTheme(QString name)
     if (!xSetting) {
         return false;
     }
-    QString old = xSetting->value(DCKEYTHEME).toString();
-    if (old == name) {
-        qWarning() << "getXSettingsValue failed";
-        return false;
-    }
 
     xSetting->setValue(DCKEYTHEME, name);
 
