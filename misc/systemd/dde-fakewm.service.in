@@ -6,7 +6,7 @@ After=plasma-kglobalaccel.service
 
 [Service]
 Type=dbus
-BusName=com.deepin.wm
+BusName=com.lingmo.wm
 ExecCondition=/bin/sh -c 'test "$XDG_SESSION_TYPE" != "wayland" || exit 2'
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/dde-fakewm
 Slice=session.slice

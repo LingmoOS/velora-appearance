@@ -1,5 +1,5 @@
 [D-BUS Service]
-Name=com.deepin.wm
+Name=com.lingmo.wm
 Exec=/bin/false
 SystemdService=dde-fakewm.service
 

@@ -61,7 +61,7 @@ extern QDBusConnection *pluginDbus;
 #define XSKEYICONTHEME           "iconThemeName"
 #define XSKEYCURSORNAME          "gtkCursorThemeName"
 
-#define SYNCSERVICENAME         "com.deepin.sync.Daemon"
+#define SYNCSERVICENAME         "com.lingmo.sync.Daemon"
 #define SYNCSERVICEPATH         "/com/deepin/sync/Daemon"
 #define SYNCSERVICEINTERFACE    "com.deepin.sync.Daemon"
 

@@ -1,4 +1,4 @@
-Source: velora-appearance
+Source: lingmo-appearance
 Section: devel
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
@@ -24,14 +24,14 @@ Build-Depends: debhelper (>= 9),
    libkf6config-dev,
    libgsettings-qt6-dev,
 Standards-Version: 3.9.8
-Homepage: https://github.com/LingmoOS/velora-appearance
+Homepage: https://github.com/LingmoOS/lingmo-appearance
 
-Package: dde-appearance
+Package: lingmo-appearance
 Architecture: any
 Depends:
-   dde-daemon (>= 6.1.26),
+   lingmo-daemon (>= 6.1.26),
    ${misc:Depends},
    ${shlibs:Depends},
-   deepin-service-manager,
-Description: deepin desktop-environment - dde-appearance module
+   lingmo-service-manager,
+Description: deepin desktop-environment - lingmo-appearance module
  dde appearance Provides application resource management and control services for the dde desktop environment.

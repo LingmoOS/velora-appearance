@@ -1,9 +1,9 @@
-Name:           dde-appearance
+Name:           lingmo-appearance
 Version:        1.0.0
 Release:        1%{?dist}
 Summary:        DDE Appearance Settings for Lingmo OS
 License:        GPL-3.0-or-later
-URL:            https://github.com/LingmoOS/dde-appearance
+URL:            https://github.com/LingmoOS/lingmo-appearance
 Source0:        dde-appearance-%{version}.tar.gz
 
 BuildRequires:  gcc-c++
@@ -34,9 +34,9 @@ and cursor themes.
 %files
 %doc README.md
 %license LICENSE*
-%{_bindir}/dde-appearance
-%{_libdir}/dde-appearance/
-%{_datadir}/dde-appearance/
+%{_bindir}/lingmo-appearance
+%{_libdir}/lingmo-appearance/
+%{_datadir}/lingmo-appearance/
 %{_datadir}/dbus-1/services/*.service
 
 %changelog

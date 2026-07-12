@@ -9,7 +9,7 @@
 class SyncConfig : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.sync.Config")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.sync.Config")
 
 public Q_SLOTS:
     virtual QByteArray Get();

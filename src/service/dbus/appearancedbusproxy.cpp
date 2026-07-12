@@ -7,14 +7,14 @@
 #include <QDBusInterface>
 #include <QDBusPendingReply>
 
-const QString DaemonService = QStringLiteral("org.deepin.dde.Daemon1");
-const QString DaemonPath = QStringLiteral("/org/deepin/dde/Daemon1");
-const QString DaemonInterface = QStringLiteral("org.deepin.dde.Daemon1");
+const QString DaemonService = QStringLiteral("org.lingmo.Daemon1");
+const QString DaemonPath = QStringLiteral("/org/lingmo/Daemon1");
+const QString DaemonInterface = QStringLiteral("org.lingmo.Daemon1");
 
 AppearanceDBusProxy::AppearanceDBusProxy(QObject *parent)
     : QObject(parent)
-    , m_displayInterface(new QDBusInterface("org.deepin.dde.Display1", "/org/deepin/dde/Display1", "org.deepin.dde.Display1", QDBusConnection::sessionBus(), this))
-    , m_xSettingsInterface(new QDBusInterface("org.deepin.dde.XSettings1", "/org/deepin/dde/XSettings1", "org.deepin.dde.XSettings1", QDBusConnection::sessionBus(),this))
+    , m_displayInterface(new QDBusInterface("org.lingmo.Display1", "/org/lingmo/Display1", "org.lingmo.Display1", QDBusConnection::sessionBus(), this))
+    , m_xSettingsInterface(new QDBusInterface("org.lingmo.XSettings1", "/org/lingmo/XSettings1", "org.lingmo.XSettings1", QDBusConnection::sessionBus(),this))
     , m_timeDateInterface(new DDBusInterface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", "org.freedesktop.timedate1", QDBusConnection::systemBus(), this))
     , m_nid(0)
 {
@@ -22,23 +22,23 @@ AppearanceDBusProxy::AppearanceDBusProxy(QObject *parent)
     if (sessionType == "wayland") {
         m_wmInterface = nullptr;
     } else {
-        m_wmInterface = new DDBusInterface("com.deepin.wm", "/com/deepin/wm", "com.deepin.wm", QDBusConnection::sessionBus(), this);
+        m_wmInterface = new DDBusInterface("com.lingmo.wm", "/com/lingmo/wm", "com.lingmo.wm", QDBusConnection::sessionBus(), this);
     }
     registerScaleFactorsMetaType();
     QDBusConnection::systemBus().connect(DaemonService, DaemonPath, DaemonInterface, "HandleForSleep", this, SIGNAL(HandleForSleep(bool)));
-    QDBusConnection::sessionBus().connect(QStringLiteral("org.deepin.dde.Timedate1"), QStringLiteral("/org/deepin/dde/Timedate1"), QStringLiteral("org.deepin.dde.Timedate1"), "TimeUpdate", this, SIGNAL(TimeUpdate()));
+    QDBusConnection::sessionBus().connect(QStringLiteral("org.lingmo.Timedate1"), QStringLiteral("/org/lingmo/Timedate1"), QStringLiteral("org.lingmo.Timedate1"), "TimeUpdate", this, SIGNAL(TimeUpdate()));
 
-    QDBusConnection::sessionBus().connect("org.deepin.dde.XSettings1","/org/deepin/dde/XSettings1","org.deepin.dde.XSettings1","SetScaleFactorStarted",this,SIGNAL(SetScaleFactorStarted()));
-    QDBusConnection::sessionBus().connect("org.deepin.dde.XSettings1","/org/deepin/dde/XSettings1","org.deepin.dde.XSettings1","SetScaleFactorDone",this,SIGNAL(SetScaleFactorDone()));
+    QDBusConnection::sessionBus().connect("org.lingmo.XSettings1","/org/lingmo/XSettings1","org.lingmo.XSettings1","SetScaleFactorStarted",this,SIGNAL(SetScaleFactorStarted()));
+    QDBusConnection::sessionBus().connect("org.lingmo.XSettings1","/org/lingmo/XSettings1","org.lingmo.XSettings1","SetScaleFactorDone",this,SIGNAL(SetScaleFactorDone()));
 
-    QDBusConnection::sessionBus().connect("org.deepin.dde.Display1", "/org/deepin/dde/Display1", "org.freedesktop.DBus.Properties","PropertiesChanged", this, SLOT(onDisplayPropertiesChanged(QDBusMessage)));
+    QDBusConnection::sessionBus().connect("org.lingmo.Display1", "/org/lingmo/Display1", "org.freedesktop.DBus.Properties","PropertiesChanged", this, SLOT(onDisplayPropertiesChanged(QDBusMessage)));
 }
 
 void AppearanceDBusProxy::setUserInterface(const QString &userPath)
 {
-    m_userInterface = QSharedPointer<DDBusInterface>(new DDBusInterface("org.deepin.dde.Accounts1",
+    m_userInterface = QSharedPointer<DDBusInterface>(new DDBusInterface("org.lingmo.Accounts1",
                                                                             userPath,
-                                                                            "org.deepin.dde.Accounts1.User",
+                                                                            "org.lingmo.Accounts1.User",
                                                                             QDBusConnection::systemBus(), this));
 }
 
@@ -183,7 +183,7 @@ void AppearanceDBusProxy::SetScreenScaleFactors(const ScaleFactors &factors)
 
 QString AppearanceDBusProxy::FindUserById(const QString &uid)
 {
-    QDBusMessage accountsMessage = QDBusMessage::createMethodCall("org.deepin.dde.Accounts1", "/org/deepin/dde/Accounts1", "org.deepin.dde.Accounts1", "FindUserById");
+    QDBusMessage accountsMessage = QDBusMessage::createMethodCall("org.lingmo.Accounts1", "/org/lingmo/Accounts1", "org.lingmo.Accounts1", "FindUserById");
     accountsMessage << uid;
     return QDBusPendingReply<QString>(QDBusConnection::systemBus().asyncCall(accountsMessage));
 }
@@ -233,28 +233,28 @@ bool AppearanceDBusProxy::nTP()
 // imageBlurInterface
 void AppearanceDBusProxy::Delete(const QString &file)
 {
-    QDBusMessage imageBlurMessage = QDBusMessage::createMethodCall("org.deepin.dde.ImageBlur1", "/org/deepin/dde/ImageBlur1", "org.deepin.dde.ImageBlur1", "Delete");
+    QDBusMessage imageBlurMessage = QDBusMessage::createMethodCall("org.lingmo.ImageBlur1", "/org/lingmo/ImageBlur1", "org.lingmo.ImageBlur1", "Delete");
     imageBlurMessage << file;
     QDBusConnection::systemBus().asyncCall(imageBlurMessage);
 }
 
 QString AppearanceDBusProxy::Get(const QString &file)
 {
-    QDBusMessage imageBlurMessage = QDBusMessage::createMethodCall("org.deepin.dde.ImageBlur1", "/org/deepin/dde/ImageBlur1", "org.deepin.dde.ImageBlur1", "Get");
+    QDBusMessage imageBlurMessage = QDBusMessage::createMethodCall("org.lingmo.ImageBlur1", "/org/lingmo/ImageBlur1", "org.lingmo.ImageBlur1", "Get");
     imageBlurMessage << file;
     return QDBusPendingReply<QString>(QDBusConnection::systemBus().asyncCall(imageBlurMessage));
 }
 // imageEffectInterface
 void AppearanceDBusProxy::Delete(const QString &effect, const QString &filename)
 {
-    QDBusMessage imageEffectMessage = QDBusMessage::createMethodCall("org.deepin.dde.ImageEffect1", "/org/deepin/dde/ImageEffect1", "org.deepin.dde.ImageEffect1", "Delete");
+    QDBusMessage imageEffectMessage = QDBusMessage::createMethodCall("org.lingmo.ImageEffect1", "/org/lingmo/ImageEffect1", "org.lingmo.ImageEffect1", "Delete");
     imageEffectMessage << effect << filename;
     QDBusConnection::systemBus().asyncCall(imageEffectMessage);
 }
 
 QString AppearanceDBusProxy::Get(const QString &effect, const QString &filename)
 {
-    QDBusMessage imageEffectMessage = QDBusMessage::createMethodCall("org.deepin.dde.ImageEffect1", "/org/deepin/dde/ImageEffect1", "org.deepin.dde.ImageEffect1", "Get");
+    QDBusMessage imageEffectMessage = QDBusMessage::createMethodCall("org.lingmo.ImageEffect1", "/org/lingmo/ImageEffect1", "org.lingmo.ImageEffect1", "Get");
     imageEffectMessage << effect << filename;
     QDBusConnection::systemBus().asyncCall(imageEffectMessage);
 

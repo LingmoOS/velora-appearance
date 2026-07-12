@@ -208,7 +208,7 @@ void AppearanceManager::handleSetScaleFactorDone()
     QString summary = tr("Set successfully");
     QStringList options{ "_logout", tr("Log Out Now"), "_later", tr("Later") };
     QMap<QString, QVariant> optionMap;
-    optionMap["x-deepin-action-_logout"] = "dbus-send,--type=method_call,--dest=org.deepin.dde.SessionManager1,"
+    optionMap["x-deepin-action-_logout"] = "dbus-send,--type=method_call,--dest=org.lingmo.SessionManager1,"
                                            "/org/deepin/dde/SessionManager1,org.deepin.dde.SessionManager1.RequestLogout";
     optionMap["x-deepin-action-_later"] = "";
     int expireTimeout = 0;
@@ -1780,8 +1780,8 @@ void AppearanceManager::doSetCurrentWorkspaceBackgroundForMonitor(const QString 
     if (utils::isTreeland()) {
         QString arg = QString("personalization/wallpaper?url=%1").arg(uri);
         DDBusSender()
-                .service("org.deepin.dde.ControlCenter1")
-                .interface("org.deepin.dde.ControlCenter1")
+                .service("org.lingmo.ControlCenter1")
+                .interface("org.lingmo.ControlCenter1")
                 .path("/org/deepin/dde/ControlCenter1")
                 .method("ShowPage")
                 .arg(arg)
@@ -1816,8 +1816,8 @@ void AppearanceManager::doSetWorkspaceBackgroundForMonitor(const int &index, con
     if (utils::isTreeland()) {
         QString arg = QString("personalization/wallpaper?url=%1").arg(uri);
         DDBusSender()
-                .service("org.deepin.dde.ControlCenter1")
-                .interface("org.deepin.dde.ControlCenter1")
+                .service("org.lingmo.ControlCenter1")
+                .interface("org.lingmo.ControlCenter1")
                 .path("/org/deepin/dde/ControlCenter1")
                 .method("ShowPage")
                 .arg(arg)

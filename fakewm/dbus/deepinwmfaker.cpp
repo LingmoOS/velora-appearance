@@ -322,7 +322,7 @@ DeepinWMFaker::DeepinWMFaker(QObject* appearance)
 {
     m_workspaceount =  QDBusInterface(KWinDBusService, "/VirtualDesktopManager", "org.kde.KWin.VirtualDesktopManager").property("count").value<int>();
     m_isPlatformX11 = Dtk::Gui::DGuiApplicationHelper::testAttribute(Dtk::Gui::DGuiApplicationHelper::IsDXcbPlatform);
-    m_appearance = QSharedPointer<DConfig>(DConfig::create("org.deepin.dde.appearance", "org.deepin.dde.appearance"));
+    m_appearance = QSharedPointer<DConfig>(DConfig::create("org.lingmo.appearance", "org.lingmo.appearance"));
     if (!m_appearance || !m_appearance->isValid()) {
         qWarning() << "appearance dconfig is not vaild";
         exit(-1);
@@ -366,9 +366,9 @@ DeepinWMFaker::DeepinWMFaker(QObject* appearance)
         }
     }
 
-    QDBusConnection::sessionBus().connect(QStringLiteral("org.deepin.dde.Appearance1"),
-                                          QStringLiteral("/org/deepin/dde/Appearance1"),
-                                          QStringLiteral("org.deepin.dde.Appearance1"),
+    QDBusConnection::sessionBus().connect(QStringLiteral("org.lingmo.Appearance1"),
+                                          QStringLiteral("/org/lingmo/Appearance1"),
+                                          QStringLiteral("org.lingmo.Appearance1"),
                                           QStringLiteral("Changed"),
                                           this,
                                           SLOT(handleThemeChanged(QString, QString)));
@@ -532,7 +532,7 @@ QString DeepinWMFaker::GetWorkspaceBackgroundForMonitor(const int index,const QS
     setDelayedReply(true);
     message.setDelayedReply(true);
 
-    QDBusInterface interface("org.deepin.dde.Appearance1", "/org/deepin/dde/Appearance1", "org.deepin.dde.Appearance1");
+    QDBusInterface interface("org.lingmo.Appearance1", "/org/lingmo/Appearance1", "org.lingmo.Appearance1");
 
     QDBusPendingCall reply = interface.asyncCallWithArgumentList("GetWorkspaceBackgroundForMonitor", {index, strMonitorName});
 
@@ -1005,7 +1005,7 @@ void DeepinWMFaker::UnMaximizeActiveWindow()
 void DeepinWMFaker::SetDecorationTheme(const QString &type, const QString &name)
 {
     m_kwinConfig->group("org.kde.kdecoration2").writeEntry("theme", QVariant());
-    m_kwinConfig->group("org.kde.kdecoration2").writeEntry("library", "com.deepin.chameleon");
+    m_kwinConfig->group("org.kde.kdecoration2").writeEntry("library", "com.lingmo.chameleon");
     m_kwinConfig->group("deepin-chameleon").writeEntry("theme", type + "/" + name);
 
     syncConfigForKWin();
@@ -1297,7 +1297,7 @@ QString DeepinWMFaker::getWorkspaceBackgroundForMonitor(const int index, const Q
 }
 void DeepinWMFaker::setWorkspaceBackgroundForMonitor(const int index, const QString &strMonitorName, const QString &uri) const
 {
-    QDBusInterface interface("org.deepin.dde.Appearance1", "/org/deepin/dde/Appearance1", "org.deepin.dde.Appearance1");
+    QDBusInterface interface("org.lingmo.Appearance1", "/org/lingmo/Appearance1", "org.lingmo.Appearance1");
     interface.call("SetWorkspaceBackgroundForMonitor", index, strMonitorName, uri);
 
     m_deepinWMWorkspaceBackgroundGroup->writeEntry(QString("%1%2%3").arg(index).arg("@" ,strMonitorName), uri);
