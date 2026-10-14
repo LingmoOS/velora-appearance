@@ -1,3 +1,13 @@
+velora-appearance (1.1.96.lingmo5u1) unstable; urgency=medium
+
+  * fix: 默认图标主题改为 Lingmo
+    - DConfig 里 Icon_Theme 的默认值原是 nirvana，本机并未安装该主题，
+      AppearanceManager 启动时查不到就回退到硬编码的 DEFAULTICONTHEME(bloom)，
+      这就是新装系统默认不是 Lingmo 图标主题、必须手动选择的原因
+    - Icon_Theme 默认值与 DEFAULTICONTHEME 一并改为 Lingmo
+    - 光标主题(DEFAULTCURSORTHEME / Cursor_Theme)本次未改，仍为 bloom
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 14 Oct 2026 16:39:57 +0800
+
 velora-appearance (1.1.95.lingmo.1) unstable; urgency=medium
 
   * new release for Lingmo OS.

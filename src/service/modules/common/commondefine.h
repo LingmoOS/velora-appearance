@@ -73,7 +73,7 @@ extern QDBusConnection *pluginDbus;
 #define QTKEYFONTSIZE           "FontSize"
 #define QTKEYMONOFONT           "MonoFont"
 #define DEFAULTGLOBALTHEME      "flow"
-#define DEFAULTICONTHEME        "bloom"
+#define DEFAULTICONTHEME        "Lingmo"
 #define	DEFAULTGTKTHEME         "deepin"
 #define	DEFAULTCURSORTHEME      "bloom"
 
