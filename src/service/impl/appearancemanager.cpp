@@ -1732,8 +1732,16 @@ void AppearanceManager::initGlobalTheme()
             doSetGlobalTheme(DEFAULTGLOBALTHEME);
             setGlobalTheme(DEFAULTGLOBALTHEME);
         } else if (!globalList.isEmpty()) {
-            doSetGlobalTheme(globalList.first()->getId());
-            setGlobalTheme(globalList.first()->getId());
+            // 存量用户：配置里的主题名已不存在，兜底到列表首个主题。
+            // 列表中的 id 不带 .light/.dark 后缀，直接应用会被 parseThemeType() 判为 Auto，
+            // 这里补上 .light，使兜底结果为亮色而不是自动。
+            QString fallbackTheme = globalList.first()->getId();
+            if (parseThemeType(fallbackTheme) == AppearanceManager::Auto) {
+                fallbackTheme.append(".light");
+                qInfo() << "global theme not found, fallback to light theme:" << fallbackTheme;
+            }
+            doSetGlobalTheme(fallbackTheme);
+            setGlobalTheme(fallbackTheme);
         } else {
             setGlobalTheme(DEFAULTGLOBALTHEME);
         }
