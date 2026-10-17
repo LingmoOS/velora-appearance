@@ -73,7 +73,7 @@
             "visibility": "private"
         },
         "Icon_Theme": {
-            "value": "Lingmo",
+            "value": "lingmo",
             "serial": 0,
             "flags": [],
             "name": "Icon_Theme",
@@ -83,7 +83,7 @@
             "visibility": "private"
         },
         "Global_Theme": {
-            "value": "nirvana.light",
+            "value": "lingmo.light",
             "serial": 0,
             "flags": [],
             "name": "Global_Theme",
