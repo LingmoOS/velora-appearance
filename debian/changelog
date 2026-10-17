@@ -1,3 +1,9 @@
+velora-appearance (1.1.97.lingmo5u1) unstable; urgency=medium
+
+  * 默认外观：图标主题图标名改正为 lingmo；全局主题默认改为 lingmo.light（亮色）。
+
+ -- Lingmo OS Team <team@lingmo.org>  Sat, 17 Oct 2026 22:49:41 +0800
+
 velora-appearance (1.1.96.lingmo5u1) unstable; urgency=medium
 
   * fix: 默认图标主题改为 Lingmo
