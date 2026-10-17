@@ -1,3 +1,13 @@
+velora-appearance (1.1.98.lingmo5u1) unstable; urgency=medium
+
+  * 全局主题名失效时兜底到亮色。
+    initGlobalTheme() 在配置里的主题名不存在时，原先把列表首个主题的裸 id
+    （无 .light/.dark 后缀）直接应用，被 parseThemeType() 判为 Auto，
+    存量用户因此一直停在自动。现仅在该兜底分支补 .light，且仅在判定为
+    Auto 时追加；用户显式设过自动或暗色的不受影响。
+
+ -- Lingmo OS Team <team@lingmo.org>  Sat, 17 Oct 2026 22:54:02 +0800
+
 velora-appearance (1.1.97.lingmo5u1) unstable; urgency=medium
 
   * 默认外观：图标主题图标名改正为 lingmo；全局主题默认改为 lingmo.light（亮色）。
